@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artsy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><span class="spanA">A</span>rtsy</a>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="signup.html">Sign Up</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+    </header>
+    <section>
+        <img src="Images/skys.png" id="skys">
+        <img src="Images/planet.png" id="planet">
+        <img src="Images/hill.png" id="hill">
+        <h2 id="txt">The World of Fine Art</h2>
+        <img src="Images/ground.png" id="ground">
+        <a href="#sec" id="btn" class="btn">Explore</a>
+    </section>
+    <div class="sec" id="sec">
+        <h2>Current Exhibitions</h2>
+        <div class="scroll-container">
+          <img src="Images/img4.jpg"  width="600" height="500"> 
+          <img src="Images/img2.jpg"  width="600" height="500">
+          <img src="Images/img5.jpg"  width="600" height="500">
+          <img src="Images/img3.jpg"  width="600" height="500">
+          <img src="Images/img7.jpg"  width="600" height="500">
+        </div>
+    </div>
+    <div class="row">
+        <h2>Featured Artists</h2>
+        <div class="column">
+          <div class="card">
+            <img src="Images/ceo.jpg" alt="Zane" style="width:100%">
+            <div class="container">
+              <h2>Zane Ali</h2>
+              <p class="title">CEO & Founder</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      
+        <div class="column">
+          <div class="card">
+            <img src="Images/dir.jpg" alt="Mike" style="width:100%">
+            <div class="container">
+              <h2>Mike Ross</h2>
+              <p class="title">Art Director</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="column">
+          <div class="card">
+            <img src="Images/designer.jpg" alt="John" style="width:100%">
+            <div class="container">
+              <h2>John Doe</h2>
+              <p class="title">Designer</p>
+              <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+              <p>example@example.com</p>
+              <p><button class="button">Contact</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="abt">
+        <h2>About Us!</h2>
+        <div>
+            <p><span id="W_Name2">Artsy</span> is a Professional <span id="W_Type1">Art gallery</span> Platform. Here we will provide you only interesting content, which you will like very much. We're dedicated to providing you the best of <span id="W_Type2">Art gallery</span>, with a focus on dependability and <span id="W_Spec">showcase arts</span>. We're working to turn our passion for <span id="W_Type3">Art gallery</span> into a booming <a href="https://www.blogearns.com/2021/05/free-about-us-page-generator.html" rel="do-follow" style="color: inherit; text-decoration: none;">online website</a>. We hope you enjoy our <span id="W_Type4">Art gallery</span> as much as we enjoy offering them to you.</p>
+            <p>I will keep posting more important posts on my Website for all of you. Please give your support and love.</p>
+            <p style="font-weight: bold; text-align: center;">Thanks For Visiting Our Site<br><br>
+        </div>
+      </div>
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script>
+        let skys = document.getElementById('skys');
+        let planet = document.getElementById('planet');
+        let hill = document.getElementById('hill')
+        let txt = document.getElementById('txt');
+        let btn = document.getElementById('btn');
+        let header = document.querySelector('header');
+
+        window.addEventListener('scroll',function(){
+            let value = window.scrollY;
+             skys.style.left = value * 0.1 + 'px';
+             planet.style.down = value * 0.1 + 'px';
+             hill.style.down = value * 0.1 + 'px'; 
+             ground.style.top = value * 0.11 + 'px';
+             txt.style.marginBottom = value * 1  + 'px';
+             txt.style.margiRight= value * 1.5  + 'px';
+             btn.style.marginTop = value  + 'px';
+             btn.style.right = value +'px';
+             header.style.top = value * 0.5 + 'px';
+        })
+    </script>
+
+    
+    
+</body>
+</html>
