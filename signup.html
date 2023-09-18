@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign UP</title>
+    <title>Sign Up</title>
     <link rel="stylesheet" href="signup.css">
 </head>
 <body>
@@ -26,7 +26,6 @@
                 </div>
                 <div class="field">
                     <input type="email" name="email" required>
-                 
                     <label>Email</label>
                 </div>
                 <div class="field">
@@ -38,13 +37,48 @@
                     <label>Confirm Password</label>
                 </div>
                 <div class="field">
-                <input name="submit" type="Submit" value="Sign Up">
+                <input name="submit" type="button" value="Sign Up" id="btn">
                 </div>
                 <div class="signup-link">
                     Have an Account ? <a href="login.html">Login Here</a>
                 </div>
             </form>
         </div>
-    </div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>Sign-up was successful!</p>
+            </div>
+        </div>
+        
+        <script>
+          
+            var modal = document.getElementById('myModal');
+            
+          
+            var btn = document.getElementById("btn");
+            
+
+            var span = document.getElementsByClassName("close")[0];
+            
+
+            var signupForm = document.querySelector('form');
+            
+
+            btn.onclick = function(event) {
+                if (signupForm.checkValidity()) {
+                    modal.style.display = "block";
+                }
+                event.preventDefault();
+            }
+            
+           
+            span.onclick = function() {
+                modal.style.display = "none";
+                signupForm.reset();
+            }
+            </script>
+            
+            
 </body>
 </html>
